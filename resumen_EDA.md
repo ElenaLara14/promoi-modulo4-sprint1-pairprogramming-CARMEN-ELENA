@@ -24,6 +24,7 @@ ________________________________________
 - **Unique:** 
 - **Tipo de Dato:** `object` OK
 - **Tratamiento de Nulos:** 
+- **Eliminar 
   
 ### 5. region
 - **Nulos:** 2 (0.00%)
@@ -44,13 +45,14 @@ ________________________________________
 - **Unique:** 
 - **Tipo de Dato:** `object` OK
 - **Tratamiento de Nulos:** 
-  - fillna ('columan address')
+  - fillna ('columna address')
 
 ### 8. address
 - **Nulos:** 0 (0.00%)
 - **Unique:** 
 - **Tipo de Dato:** `object` OK
 - **Tratamiento de Nulos:** 
+- ** Romper columna para completar datos de provincia y ciudad
   
 ### 9. latitude
 - **Nulos:** 2363 (1.50%)
@@ -107,26 +109,31 @@ ________________________________________
 - **Tratamiento de Nulos:** 
   - fillna ('Desconocido')?
 
+— € Económico; Precios entre 0-25€
+— €€ Moderado (en la media); Precios entre 25-50€
+— €€€ Caro; Precios entre 50-80€
+— €€€€ Lujoso; Precios de más de 80€
+
 ### 17. price_range
 - **Nulos:** 109167 (69.32%)
 - **Unique:** 
 - **Tipo de Dato:** `object` OK
 - **Tratamiento de Nulos:** 
-  - fillna ('Desconocido')?
+  - Crearla desde 0 con los valores que consideremos
 
 ### 18. meals
 - **Nulos:** 70765 (44.94%)
 - **Unique:** 
 - **Tipo de Dato:** `object` OK
 - **Tratamiento de Nulos:** 
-  - fillna ('UNKNOWN')? categoria dominante?
+  - fillna ('UNKNOWN')?
 
 ### 19. cuisines
 - **Nulos:** 22514 (14.30%)
 - **Unique:** 
 - **Tipo de Dato:** `object` OK
 - **Tratamiento de Nulos:** 
-  - fillna ('Unknown')? catgoria dominante?
+  - catgoria dominante?
 
 ### 20. special_diets - ELIMINAR NOS QUEDAMOS CON LAS COLUMNAS VEGAN FRIENDLY ETC QUE TIENE 0 NULOS
 - **Nulos:** 115423 (73.29%)
@@ -144,19 +151,19 @@ ________________________________________
 
 ### 22. vegetarian_friendly
 - **Nulos:** 0 (0.00%)
-- **Unique:** n O S (CAMBIAMOS A SI O NO?)
+- **Unique:** n O S (CAMBIAMOS A YES O NO)
 - **Tipo de Dato:** `object` OK
 - **Tratamiento de Nulos:** 
   
 ### 23. vegan_options
 - **Nulos:** 0 (0.00%)
-- **Unique:** n O S (CAMBIAMOS A SI O NO?)
+- **Unique:** n O S (CAMBIAMOS A YES O NO?)
 - **Tipo de Dato:** `object` OK
 - **Tratamiento de Nulos:** 
   
 ### 24. gluten_free
 - **Nulos:** 0 (0.00%)
-- **Unique:** n O S (CAMBIAMOS A SI O NO?)
+- **Unique:** n O S (CAMBIAMOS A YES O NO?)
 - **Tipo de Dato:** `object` OK
 - **Tratamiento de Nulos:** 
   
@@ -172,84 +179,84 @@ ________________________________________
 - **Unique:** 
 - **Tipo de Dato:** `float64` -CAMBIAR A INT
 - **Tratamiento de Nulos:** 
-  - fillna (mean)
+  - fillna (-1)
 
 ### 27. open_hours_per_week
 - **Nulos:** 81749 (51.91%)
 - **Unique:** 
 - **Tipo de Dato:** `float64` -CAMBIAR A INT
 - **Tratamiento de Nulos:** 
-  - fillna (mean)
+  - fillna (-1)
 
 ### 28. working_shifts_per_week
 - **Nulos:** 81749 (51.91%)
 - **Unique:** 
 - **Tipo de Dato:** `float64` -CAMBIAR A INT
 - **Tratamiento de Nulos:** 
-  - fillna (mean)?
+  - fillna (-1)?
 
 ### 29. avg_rating
 - **Nulos:** 14811 (9.41%)
 - **Unique:** 1 AL 5
 - **Tipo de Dato:** `float64` -CAMBIAR A INT
 - **Tratamiento de Nulos:** 
-  - fillna (mean)
+  - fillna (mean/median)
 
 ### 30. total_reviews_count
 - **Nulos:** 8868 (5.63%)
 - **Unique:** 
 - **Tipo de Dato:** `float64`-CAMBIAR A INT
 - **Tratamiento de Nulos:** 
-  - fillna (MEAN)
+  - fillna (MEAN/median)
 
 ### 31. default_language
 - **Nulos:** 14491 (9.20%)
 - **Unique:** 
 - **Tipo de Dato:** `object` OK
 - **Tratamiento de Nulos:** 
-  - fillna ('SPANISH')?
+  - Eliminar
 
 ### 32. reviews_count_in_default_language
 - **Nulos:** 14491 (9.20%)
 - **Unique:** 
 - **Tipo de Dato:** `float64`-CAMBIAR A INT
 - **Tratamiento de Nulos:** 
-  - fillna (MEAN)?
+  - fillna (MEAN/median)?
 
 ### 33. excellent
 - **Nulos:** 14491 (9.20%)
 - **Unique:** 
 - **Tipo de Dato:** `float64` -CAMBIAR A INT
 - **Tratamiento de Nulos:** 
-  - fillna (MEAN)
+  - fillna (MEAN/median)
 
 ### 34. very_good
 - **Nulos:** 14491 (9.20%)
 - **Unique:** 
 - **Tipo de Dato:** `float64`-CAMBIAR A INT
 - **Tratamiento de Nulos:** 
-  - fillna (MEAN)
+  - fillna (MEAN/median)
 
 ### 35. average
 - **Nulos:** 14491 (9.20%)
 - **Unique:** 
 - **Tipo de Dato:** `float64`-CAMBIAR A INT
 - **Tratamiento de Nulos:** 
-  - fillna (MEAN)
+  - fillna (MEAN/median)
 
 ### 36. poor
 - **Nulos:** 14491 (9.20%)
 - **Unique:** 
 - **Tipo de Dato:** `float64` -CAMBIAR A INT
 - **Tratamiento de Nulos:** 
-  -  fillna (MEAN)
+  -  fillna (MEAN/median)
 
 ### 37. terrible
 - **Nulos:** 14491 (9.20%)
 - **Unique:** 
 - **Tipo de Dato:** `float64`-CAMBIAR A INT
 - **Tratamiento de Nulos:** 
-  -  fillna (MEAN)
+  -  fillna (MEAN/median)
 
 ### 38. food
 - **Nulos:** 76643 (48.67%)
